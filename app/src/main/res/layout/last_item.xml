@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.lingsatuo.View.BackgroundProgress
+        android:layout_width="match_parent"
+        android:clickable="false"
+        android:background="#00FFFFFF"
+        android:id="@+id/background_progress_0"
+        android:focusable="false"
+        android:layout_height="60dp" />
+<TextView
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:text="没找到？戳我试试！(视频也可以哦)"
+    android:layout_height="61dp" />
+</RelativeLayout>

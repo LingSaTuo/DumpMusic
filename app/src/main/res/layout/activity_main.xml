@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:id="@+id/background"
+    tools:context="com.lingsatuo.dumpmusic.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/a_000"
+            android:layout_height="65dp">
+            <include layout="@layout/music_play_layout"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="60dp"
+            android:layout_height="match_parent">
+    <include layout="@layout/content_main"
+        />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <com.lingsatuo.View.floatingactionbutton.FloatingActionsMenu
+    android:id="@+id/btn_capture"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginBottom="16dp"
+    app:fab_addButtonColorNormal="#ffffff"
+    app:fab_addButtonColorPressed="#aba6a6"
+    app:fab_addButtonStrokeVisible="false"
+    app:fab_expandDirection="left_right"
+    app:fab_menu_icon="@mipmap/editor">
+
+    <com.lingsatuo.View.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_trash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="#ffffff"
+        app:fab_colorPressed="#aba6a6"
+        app:fab_icon="@mipmap/cut" />
+
+    <com.lingsatuo.View.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="#ffffff"
+        app:fab_colorPressed="#aba6a6"
+        app:fab_icon="@mipmap/hc" />
+    </com.lingsatuo.View.floatingactionbutton.FloatingActionsMenu>
+</android.support.design.widget.CoordinatorLayout>

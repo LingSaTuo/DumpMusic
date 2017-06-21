@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <com.lingsatuo.View.BackgroundProgress
+        android:layout_width="match_parent"
+        android:clickable="false"
+        android:background="#00FFFFFF"
+        android:id="@+id/background_progress"
+        android:focusable="false"
+        android:layout_height="60dp" />
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<com.makeramen.roundedimageview.RoundedImageView
+    android:padding="10dp"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:id="@+id/album"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/music"
+    app:riv_border_color="#333333"
+    app:riv_border_width="1dip"
+    app:riv_mutate_background="true"
+    app:riv_oval="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="name"
+            android:singleLine="true"
+            android:id="@+id/title"
+            android:textSize="15sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="value"
+            android:paddingRight="30dp"
+            android:singleLine="true"
+            android:id="@+id/singer"
+            android:textSize="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="60dp"
+        android:layout_height="1sp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#66000000"
+        />
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:text="实时波形"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="70dp">
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:paddingRight="4dp"
+           android:layout_weight="7"
+           android:layout_height="match_parent">
+           <com.makeramen.roundedimageview.RoundedImageView
+               android:padding="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/adlumicon"
+               android:scaleType="centerCrop"
+               android:src="@mipmap/unknown"
+               app:riv_border_color="#333333"
+               app:riv_border_width="1dip"
+               app:riv_corner_radius="10dip"
+               app:riv_mutate_background="true" />
+           <VideoView
+               android:layout_width="match_parent"
+               android:visibility="gone"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:id="@+id/video"
+               android:layout_height="match_parent" />
+       </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <com.lingsatuo.View.VisualizerView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/bisualizerview2"
+                />
+            <com.lingsatuo.View.BaseVisualizerView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/bisualizerview"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <com.lingsatuo.View.WaveformView2
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/wave2"
+            />
+        <com.lingsatuo.View.WM
+            android:layout_width="match_parent"
+            android:id="@+id/waveback"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:text="截选轴 + 放大所选  (裁剪以第二根为准)"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <com.lingsatuo.View.TwoButtonSeekBar
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/twoseekbar_0"
+        android:layout_height="wrap_content" />
+    <com.lingsatuo.View.TwoButtonSeekBar
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/twoseekbar_1"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:text="微调"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="—"
+            android:layout_weight="2"
+            android:id="@+id/left_0"
+            android:layout_height="wrap_content" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:gravity="center"
+          android:text="100"
+          android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="+"
+            android:id="@+id/left_1"
+            android:layout_weight="2"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:text="—"
+                android:layout_weight="1"
+                android:id="@+id/right_0"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="100"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:text="+"
+                android:id="@+id/right_1"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:text="实时进度"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/new_"
+        android:text="0"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/now"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/max"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <SeekBar
+        android:layout_width="match_parent"
+        android:id="@+id/seekbar_0"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:text="说明区"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/wc"
+        android:layout_height="wrap_content" />
+</LinearLayout>

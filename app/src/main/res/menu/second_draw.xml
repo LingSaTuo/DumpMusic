@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="其他操作"
+        android:id="@+id/jc">
+        <menu>
+            <item android:title="交封别杀"
+                android:id="@+id/save_pic"
+                android:visible="false"
+                android:icon="@mipmap/save_pic" />
+        </menu>
+    </item>
+</menu>
